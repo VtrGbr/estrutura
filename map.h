@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-void ler(double* vetor, int tam);
+void ler1(double* vetor, int tam);
 
-void imprimir(double* par,int tam);
+void imprimir1(double* par,int tam);
 
 double quadrado(double numero);
 

@@ -1,4 +1,5 @@
 #include "filter.h"
+
 //--------------------------Funcoes para serem chamadas pela funcao genericas -----------------------------
 int paridade(int numero){
     return (numero % 2 == 0)? 0: 1;
@@ -27,7 +28,7 @@ void imprimir(int* par,int tam){
     }
 }
 
-double* filter(double (*filtro)(double), int *vetor, int tam, int *contagem) {
+double* filter(double (*filtro)(double), double *vetor, int tam, int *contagem) {
     double* temp = (double*)malloc(tam * sizeof(double));
     if (!temp) {
         printf("Erro ao alocar memória.\n");
@@ -43,7 +44,7 @@ double* filter(double (*filtro)(double), int *vetor, int tam, int *contagem) {
     }
 
     // Ajustando o tamanho do vetor filtrado
-    int* par = (int*)realloc(temp, (*contagem) * sizeof(int));
+    double* par = (double*)realloc(temp, (*contagem) * sizeof(double));
     if (!par) {
         printf("Erro ao realocar memória.\n");
         free(temp);

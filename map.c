@@ -1,7 +1,7 @@
 #include "map.h"
 
 
-void ler(double* vetor, int tam){
+void ler1(double* vetor, int tam){
     for(int i = 0; i < tam; i++){
         printf("vetor[%d]: ",i);
         scanf("%lf",&vetor[i]);
@@ -9,7 +9,7 @@ void ler(double* vetor, int tam){
 
 }
 
-void imprimir(double* par,int tam){
+void imprimir1(double* par,int tam){
     for(int i = 0; i < tam; i++){
         printf("%.2lf ",par[i]);
     }
@@ -53,19 +53,19 @@ int main(){
         exit(1);
     }
 
-    ler(vetor,tam);
+    ler1(vetor,tam);
 
     double* final = map(vetor,tam,quadrado);
     printf("Quadrado dos valores: \n");
-    imprimir(final,tam);
+    imprimir1(final,tam);
 
     final = map(vetor,tam,raiz_quadrada);
     printf("Raiz quadrada: \n");
-    imprimir(final,tam);
+    imprimir1(final,tam);
     
     final = map(vetor,tam,cubo);
     printf("Raiz quadrada: \n");
-    imprimir(final,tam);
+    imprimir1(final,tam);
     
     
     free(final);
